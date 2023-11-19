@@ -13,9 +13,10 @@ val daggerHilt: String by extra
 
 // Google
 val googleMaterial: String by extra
+val googleGson: String by extra
 
-// Picasso
-val picasso: String by extra
+// Retrofit
+val retrofit: String by extra
 
 // Unit & Instrumentation testing
 val junitVersion: String by extra
@@ -77,6 +78,7 @@ dependencies {
 
     implementation(project(":libs:domain"))
     implementation(project(":libs:navigation"))
+    implementation(project(":libs:ui-components"))
 
     implementation("androidx.core:core-ktx:$androidxCore")
     implementation("androidx.appcompat:appcompat:$androidxAppCompat")
@@ -84,12 +86,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$androidxViewModel")
     implementation("androidx.fragment:fragment-ktx:$androidxFragment")
 
-    implementation("com.squareup.picasso:picasso:$picasso")
-
     implementation("com.google.android.material:material:$googleMaterial")
 
     implementation("com.google.dagger:hilt-android:$daggerHilt")
     kapt("com.google.dagger:hilt-compiler:$daggerHilt")
+
+    implementation("com.squareup.retrofit2:retrofit:$retrofit")
+
+    implementation("com.google.code.gson:gson:$googleGson")
 
     testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlin")
     testImplementation("org.mockito:mockito-core:$mockitoCore")

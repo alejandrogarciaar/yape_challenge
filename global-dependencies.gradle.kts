@@ -12,6 +12,7 @@ mapOf(
 // Google
 mapOf(
     "googleMaterial" to "1.10.0",
+    "googleGson" to "2.10",
 ).forEach { (name, version) ->
     project.extra.set(name, version)
 }

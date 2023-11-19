@@ -1,8 +1,15 @@
 apply(from = "../../global-dependencies.gradle.kts")
 apply(from = "../../global-config.gradle.kts")
 
-// Depedencies
-val retrofit: String by extra
+// AndroidX
+val androidxCore: String by extra
+val androidxAppCompat: String by extra
+
+// Picasso
+val picasso: String by extra
+
+// Google
+val googleMaterial: String by extra
 
 // Project config
 val defaultCompileSdk: Int by extra
@@ -14,7 +21,7 @@ plugins {
 }
 
 android {
-    namespace = "com.john.network"
+    namespace = "com.john.ui_component"
     compileSdk = defaultCompileSdk
 
     defaultConfig {
@@ -22,6 +29,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -31,16 +39,24 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
 dependencies {
-    implementation("com.squareup.retrofit2:retrofit:$retrofit")
-    implementation("com.squareup.retrofit2:converter-gson:$retrofit")
+    implementation("androidx.core:core-ktx:$androidxCore")
+    implementation("androidx.appcompat:appcompat:$androidxAppCompat")
+    implementation("com.google.android.material:material:$googleMaterial")
+    implementation("com.squareup.picasso:picasso:$picasso")
 }

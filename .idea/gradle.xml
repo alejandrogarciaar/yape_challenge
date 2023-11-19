@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/libs/domain" />
             <option value="$PROJECT_DIR$/libs/navigation" />
             <option value="$PROJECT_DIR$/libs/network" />
+            <option value="$PROJECT_DIR$/libs/ui-components" />
           </set>
         </option>
       </GradleProjectSettings>

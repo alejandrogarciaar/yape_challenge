@@ -77,6 +77,7 @@ dependencies {
 
     implementation(project(":libs:domain"))
     implementation(project(":libs:navigation"))
+    implementation(project(":libs:ui-components"))
 
     implementation("androidx.core:core-ktx:$androidxCore")
     implementation("androidx.appcompat:appcompat:$androidxAppCompat")

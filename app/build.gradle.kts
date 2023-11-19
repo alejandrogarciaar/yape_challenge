@@ -72,6 +72,7 @@ dependencies {
     implementation(project(":features:detail"))
     implementation(project(":libs:navigation"))
     implementation(project(":libs:network"))
+    implementation(project(":libs:ui-components"))
 
     implementation("androidx.core:core-ktx:$androidxCore")
     implementation("androidx.appcompat:appcompat:$androidxAppCompat")
@@ -79,6 +80,9 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:$daggerHilt")
     kapt("com.google.dagger:hilt-compiler:$daggerHilt")
+
+    implementation("com.squareup.retrofit2:retrofit:$retrofit")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit")
 
     testImplementation("junit:junit:$junitVersion")
     androidTestImplementation("androidx.test.ext:junit:$androidJunit")
