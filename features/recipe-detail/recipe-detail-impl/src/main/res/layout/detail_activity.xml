@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_container"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!-- Loading -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/base_primary_color"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <!-- Error -->
+            <TextView
+                android:id="@+id/error_text_view"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_something_went_wrong"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <!-- Details -->
+            <LinearLayout
+                android:id="@+id/details_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/recipe_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_image_height"
+                    android:contentDescription="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_no_photo" />
+
+                <TextView
+                    android:id="@+id/recipe_name_text_view"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_marginStart="@dimen/padding_small"
+                    tools:text="Spaghetti Bolognese" />
+
+                <TextView
+                    android:id="@+id/recipe_ingredients_title_text_view"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_marginStart="@dimen/padding_small"
+                    android:text="@string/details_ingredients" />
+
+                <TextView
+                    android:id="@+id/recipe_ingredients_text_view"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_marginStart="@dimen/padding_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recipe_image_view"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="400g ground beef \n 1 onion 2 cloves garlic \n 1 can (400g) crushed tomatoes \n 2 tablespoons tomato paste \n 1 tsp dried oregano \n Salt and pepper to taste \n 300g spaghetti \n Grated Parmesan cheese" />
+
+                <TextView
+                    android:id="@+id/recipe_instructions_title_text_view"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_marginStart="@dimen/padding_small"
+                    android:text="@string/details_instructions" />
+
+                <TextView
+                    android:id="@+id/recipe_instructions_text_view"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_marginStart="@dimen/padding_small"
+                    app:layout_constraintStart_toEndOf="@+id/recipe_image_view"
+                    tools:layout_editor_absoluteY="331dp"
+                    tools:text="1. Brown ground beef in a pan. \n2. Add onion and garlic; cook until soft. \n3. Stir in crushed tomatoes, tomato paste, oregano, basil, salt, and pepper. \n4. Simmer for 20-30 minutes. \n5. Cook spaghetti; serve Bolognese over spaghetti, garnish with Parmesan." />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Bottom -->
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/check_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small"
+            android:text="@string/details_check_location"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+</RelativeLayout>

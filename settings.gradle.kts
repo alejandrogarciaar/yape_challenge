@@ -15,9 +15,17 @@ dependencyResolutionManagement {
 
 rootProject.name = "YapeApp"
 include(":app")
-include(":features:home")
-include(":features:detail")
+
+// Home
+include(":features:home:home-api")
+include(":features:home:home-impl")
+include(":features:home:home-wiring-impl")
+
+// Recipe detail
+include(":features:recipe-detail:recipe-detail-api")
+include(":features:recipe-detail:recipe-detail-impl")
+include(":features:recipe-detail:recipe-detail-wiring-impl")
+
+// Libs
 include(":libs:domain")
-include(":libs:navigation")
-include(":libs:network")
 include(":libs:ui-components")

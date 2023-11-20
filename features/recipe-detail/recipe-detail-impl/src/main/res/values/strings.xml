@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="details_something_went_wrong">Something went wrong</string>
+    <string name="details_ingredients">Ingredients</string>
+    <string name="details_instructions">Instructions</string>
+    <string name="details_check_location">Check recipe location</string>
+</resources>

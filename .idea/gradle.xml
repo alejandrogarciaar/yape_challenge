@@ -13,11 +13,17 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/detail" />
             <option value="$PROJECT_DIR$/features/home" />
+            <option value="$PROJECT_DIR$/features/home/home-api" />
+            <option value="$PROJECT_DIR$/features/home/home-impl" />
+            <option value="$PROJECT_DIR$/features/home/home-wiring-impl" />
+            <option value="$PROJECT_DIR$/features/map" />
+            <option value="$PROJECT_DIR$/features/recipe-detail" />
+            <option value="$PROJECT_DIR$/features/recipe-detail/recipe-detail-api" />
+            <option value="$PROJECT_DIR$/features/recipe-detail/recipe-detail-impl" />
+            <option value="$PROJECT_DIR$/features/recipe-detail/recipe-detail-wiring-impl" />
             <option value="$PROJECT_DIR$/libs" />
             <option value="$PROJECT_DIR$/libs/domain" />
-            <option value="$PROJECT_DIR$/libs/navigation" />
             <option value="$PROJECT_DIR$/libs/network" />
             <option value="$PROJECT_DIR$/libs/ui-components" />
           </set>
