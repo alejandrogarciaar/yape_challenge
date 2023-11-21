@@ -34,7 +34,11 @@ class HomeViewModel @Inject constructor(
             if (response.isSuccess) {
                 response.getOrNull()?.let { remoteReceipts ->
                     recipes = remoteReceipts
-                    _uiState.postValue(HomeUiState.ShowReceipts(recipes = recipes))
+                    if (recipes.isNotEmpty()) {
+                        _uiState.postValue(HomeUiState.ShowReceipts(recipes = recipes))
+                    } else {
+                        _uiState.postValue(HomeUiState.ShowEmptyState)
+                    }
                 } ?: run {
                     _uiState.postValue(HomeUiState.ShowEmptyState)
                 }
