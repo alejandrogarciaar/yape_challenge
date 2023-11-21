@@ -14,6 +14,7 @@ val daggerHilt: String by extra
 // Google
 val googleMaterial: String by extra
 val googleGson: String by extra
+val googleMaps: String by extra
 
 // Picasso
 val picasso: String by extra
@@ -41,6 +42,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+    id ("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -79,7 +81,6 @@ android {
 
 dependencies {
 
-
     implementation(project(":libs:ui-components"))
     implementation(project(":libs:domain"))
 
@@ -98,6 +99,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofit")
 
     implementation("com.google.code.gson:gson:$googleGson")
+
+    implementation("com.google.android.gms:play-services-maps:$googleMaps")
 
     testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlin")
     testImplementation("org.mockito:mockito-core:$mockitoCore")

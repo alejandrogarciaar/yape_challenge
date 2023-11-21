@@ -1,9 +1,9 @@
 package com.john.home_impl.presentation
 
 import android.os.Bundle
-import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.john.home_impl.presentation.HomeUiAction.Idle
@@ -49,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
     private fun setupAdapter() {
         adapter = HomeRecipePreviewAdapter(
             onReceiptClicked = {
-                detailNavigation.startNavigation(this, it)
+                detailNavigation.startRecipeDetail(this, it)
             }
         )
         binding.resultsRecyclerView.adapter = adapter

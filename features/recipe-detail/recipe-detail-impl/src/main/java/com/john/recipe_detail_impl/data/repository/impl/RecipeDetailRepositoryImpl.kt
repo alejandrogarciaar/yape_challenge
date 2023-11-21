@@ -16,7 +16,7 @@ class RecipeDetailRepositoryImpl @Inject constructor(
 ) : RecipeDetailRepository {
     override suspend fun getRecipeDetail(id: Long): Result<RecipeDetail> {
         return try {
-            val response = recipeDetailApi.getRecipeDetail(id)
+            val response = recipeDetailApi.getRecipeDetail()
             Result.success(RecipeDetailMapper.map(response))
         } catch (exception: SocketException) {
             Result.failure(

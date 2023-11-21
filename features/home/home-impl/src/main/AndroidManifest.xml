@@ -6,7 +6,8 @@
     <application>
         <activity
             android:name=".presentation.HomeActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.YapeApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -7,7 +7,7 @@ import com.john.recipe_detail_impl.presentation.RecipeDetailActivity
 import javax.inject.Inject
 
 class RecipeDetailsNavigationImpl @Inject constructor() : RecipeDetailsNavigation {
-    override fun startNavigation(context: Context, id: Long) {
+    override fun startRecipeDetail(context: Context, id: Long) {
         context.startActivity(Intent(context, RecipeDetailActivity::class.java).apply {
             putExtra(RecipeDetailActivity.RECIPE_ID, id)
         })

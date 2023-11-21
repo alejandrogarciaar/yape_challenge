@@ -10,6 +10,6 @@ interface RecipeDetailApi {
     suspend fun getRecipeDetail(@Path("id") id: Long = 1L): RecipeDetailDTO
 
     private companion object {
-        const val GET_DETAIL_RECIPE = "/recipe/{id}"
+        const val GET_DETAIL_RECIPE = "recipes/{id}"
     }
 }

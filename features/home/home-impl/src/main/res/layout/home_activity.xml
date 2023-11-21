@@ -15,12 +15,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:queryBackground="@android:color/white"
-            android:queryHint="@string/home_search_type_something" />
+            android:background="@android:color/white"
+            android:padding="@dimen/padding_small"
+            android:queryHint="@string/home_search_type_something"
+            android:theme="@style/CustomSearchViewStyle"
+            app:searchIcon="@drawable/ic_search" />
 
     </androidx.cardview.widget.CardView>
 
@@ -40,6 +43,7 @@
         android:id="@+id/results_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
     <!-- Content -->
     <ScrollView
@@ -40,8 +41,8 @@
             <!-- Details -->
             <LinearLayout
                 android:id="@+id/details_container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:visibility="gone"
                 tools:visibility="visible">
@@ -51,6 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_image_height"
                     android:contentDescription="@null"
+                    android:scaleType="fitXY"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/ic_no_photo" />
@@ -62,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/padding_small"
                     android:layout_marginStart="@dimen/padding_small"
+                    android:textColor="@android:color/black"
                     tools:text="Spaghetti Bolognese" />
 
                 <TextView
@@ -71,7 +74,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/padding_small"
                     android:layout_marginStart="@dimen/padding_small"
-                    android:text="@string/details_ingredients" />
+                    android:text="@string/details_ingredients"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/recipe_ingredients_text_view"
@@ -80,6 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/padding_small"
                     android:layout_marginStart="@dimen/padding_small"
+                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/recipe_image_view"
                     app:layout_constraintTop_toTopOf="parent"
@@ -92,7 +97,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/padding_small"
                     android:layout_marginStart="@dimen/padding_small"
-                    android:text="@string/details_instructions" />
+                    android:text="@string/details_instructions"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/recipe_instructions_text_view"
@@ -101,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/padding_small"
                     android:layout_marginStart="@dimen/padding_small"
+                    android:textColor="@android:color/black"
                     app:layout_constraintStart_toEndOf="@+id/recipe_image_view"
                     tools:layout_editor_absoluteY="331dp"
                     tools:text="1. Brown ground beef in a pan. \n2. Add onion and garlic; cook until soft. \n3. Stir in crushed tomatoes, tomato paste, oregano, basil, salt, and pepper. \n4. Simmer for 20-30 minutes. \n5. Cook spaghetti; serve Bolognese over spaghetti, garnish with Parmesan." />
@@ -115,9 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible">
+        android:gravity="center">
 
         <Button
             android:id="@+id/check_location_button"
@@ -126,6 +131,7 @@
             android:layout_margin="@dimen/padding_small"
             android:text="@string/details_check_location"
             android:textAllCaps="false"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
