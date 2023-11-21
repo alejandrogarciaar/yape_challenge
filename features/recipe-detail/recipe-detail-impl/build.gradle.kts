@@ -26,11 +26,9 @@ val retrofit: String by extra
 val junitVersion: String by extra
 val androidJunit: String by extra
 val espressoCore: String by extra
-val mockitoKotlin: String by extra
-val mockitoCore: String by extra
-val mockitoInline: String by extra
 val kotlinCoroutines: String by extra
 val androidCoreTesting: String by extra
+val mockkVersion: String by extra
 
 // Project config
 val defaultCompileSdk: Int by extra
@@ -42,7 +40,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
-    id ("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -66,12 +64,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 
     buildFeatures {
@@ -102,9 +100,9 @@ dependencies {
 
     implementation("com.google.android.gms:play-services-maps:$googleMaps")
 
-    testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlin")
-    testImplementation("org.mockito:mockito-core:$mockitoCore")
-    testImplementation("org.mockito:mockito-inline:$mockitoInline")
+    testImplementation("io.mockk:mockk-android:${mockkVersion}")
+    testImplementation("io.mockk:mockk-agent:${mockkVersion}")
+    testImplementation("io.mockk:mockk-agent-jvm:$mockkVersion")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutines")
     testImplementation("androidx.arch.core:core-testing:$androidCoreTesting")
     testImplementation("junit:junit:$junitVersion")

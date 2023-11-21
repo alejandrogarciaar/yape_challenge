@@ -42,9 +42,7 @@ mapOf(
 // Unit Testing
 mapOf(
     "junitVersion" to "4.13.2",
-    "mockitoKotlin" to "3.2.0",
-    "mockitoCore" to "3.9.0",
-    "mockitoInline" to "3.9.0",
+    "mockkVersion" to "1.13.8",
     "kotlinCoroutines" to "1.2.0",
     "androidCoreTesting" to "2.2.0"
 ).forEach { (name, version) ->
