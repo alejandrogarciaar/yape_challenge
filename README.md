@@ -2,9 +2,11 @@
 # Autor: John Alejandro Garcia Arias
 
 ## Screenshots
+<img width="354" alt="Screenshot 2023-11-20 at 8 49 14 PM" src="https://github.com/alejandrogarciaar/yape_challenge/assets/8558947/3af1445b-32e9-4c87-ba8f-1506a1f02f00">
+<img width="354" alt="Screenshot 2023-11-20 at 8 48 45 PM" src="https://github.com/alejandrogarciaar/yape_challenge/assets/8558947/14f0aabd-ecc4-41ed-87ff-b428e7e89676">
+<img width="354" alt="Screenshot 2023-11-20 at 8 48 40 PM" src="https://github.com/alejandrogarciaar/yape_challenge/assets/8558947/12ca7cd1-4cc0-457d-a6d2-0587dd2cb6bc">
 
 ## Secciones
-
 * [Estructura del proyecto](#estructura-del-proyecto)
 * [Por qué Multi-Module](#por-qué-multi-module)
 * [Pruebas Unitarias](#pruebas-unitarias)
